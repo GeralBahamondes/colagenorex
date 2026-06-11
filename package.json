@@ -4,9 +4,11 @@
   "description": "Landing page premium para Colagenorex",
   "main": "index.html",
   "scripts": {
-    "build": "echo 'No build step required'",
-    "start": "echo 'Static hosting'"
+    "dev": "serve",
+    "start": "serve",
+    "build": "echo 'Static hosting ready'"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
 }
