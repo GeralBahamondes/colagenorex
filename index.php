@@ -19,7 +19,6 @@ get_header();
             
             <!-- Contenido del Hero (Lado Izquierdo) -->
             <div class="hero-content">
-                <span class="label-sm" style="color: var(--color-secondary);">Suplemento Científico Premium</span>
                 <h1 class="display-lg hero-title">
                     Recupera tu movilidad y fortalece tus articulaciones desde el interior
                 </h1>
@@ -387,44 +386,14 @@ get_header();
     </section>
 
     <!-- ==========================================
-         6. SECCIÓN: MODO DE USO
+         6. SECCIÓN: INFORMACIÓN NUTRICIONAL Y MODO DE USO
          ========================================== -->
     <section class="usage-section section-padding">
         <div class="container">
-            <h2 class="headline-lg">Modo de Uso</h2>
+            <h2 class="headline-lg">Información Nutricional</h2>
             
-            <div class="usage-grid">
-                
-                <!-- Dosis Diaria -->
-                <div class="usage-card">
-                    <div class="usage-icon">
-                        <!-- Icono de Cápsula/Píldora -->
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 0-5 5v10a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"></path><path d="M7 12h10"></path></svg>
-                    </div>
-                    <h3>3 cápsulas al día</h3>
-                    <p class="body-md">Dosis diaria recomendada para máxima eficacia biológica.</p>
-                </div>
-
-                <!-- Concentración -->
-                <div class="usage-card">
-                    <div class="usage-icon">
-                        <!-- Icono de Onda Vital/Corazón -->
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-                    </div>
-                    <h3>1.100 mg por porción</h3>
-                    <p class="body-md">Concentración óptima de colágeno hidrolizado puro.</p>
-                </div>
-
-                <!-- Contenido -->
-                <div class="usage-card">
-                    <div class="usage-icon">
-                        <!-- Icono de Calendario -->
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                    </div>
-                    <h3>90 Cápsulas</h3>
-                    <p class="body-md">Suministro garantizado para 30 días de bienestar continuo.</p>
-                </div>
-
+            <div class="nutritional-info-container" style="display: flex; justify-content: center; align-items: center;">
+                <img src="<?php echo esc_url( get_template_directory_uri() . '/images/infonutri.jfif' ); ?>" alt="Información Nutricional" style="max-width: 100%; height: auto;">
             </div>
         </div>
     </section>

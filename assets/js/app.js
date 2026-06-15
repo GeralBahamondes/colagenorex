@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (targetElement) {
                 e.preventDefault();
                 
-                // Calcular compensación por la cabecera fija (80px)
-                const headerHeight = 80;
+                // Calcular compensación por la cabecera fija (115px)
+                const headerHeight = 115;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
 
@@ -142,9 +142,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const selectConsult = document.getElementById('form-consult');
             const consultText = selectConsult.options[selectConsult.selectedIndex].text;
 
-            // Número de WhatsApp comercial al que se enviará (configurable)
+            // Número de WhatsApp comercial al que se enviará
             // Usaremos un formato internacional limpio sin símbolos
-            const whatsappNumber = '56930000000'; // Reemplazar con el número real de destino
+            const whatsappNumber = '56985632681'; // Número real de destino asignado por el usuario
 
             // Redactar mensaje profesional y ordenado
             const message = `Hola COLAGENOREX,\n\n` +

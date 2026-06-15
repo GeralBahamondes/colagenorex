@@ -57,7 +57,7 @@ Text Domain: colagenorex
     --color-surface-variant: #e0e3e6;
 
     /* Tipografía */
-    --font-display: 'Montserrat', sans-serif;
+    --font-display: 'Poppins', sans-serif;
     --font-body: 'Inter', sans-serif;
 
     /* Bordes Redondeados (Shapes) */
@@ -121,7 +121,7 @@ a {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     font-weight: 700;
-    color: var(--color-primary);
+    color: #111111; /* Negro para mayor legibilidad */
     line-height: 1.25;
 }
 
@@ -210,16 +210,16 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-/* Botón Primario: Azul profundo */
+/* Botón Primario: Verde de marca */
 .btn-primary {
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     color: var(--color-on-primary);
 }
 
 .btn-primary:hover {
-    background-color: #003766;
+    background-color: #008f39;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 37, 70, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 110, 44, 0.15);
 }
 
 /* Botón Secundario: Verde de conversión */
@@ -234,15 +234,15 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 4px 12px rgba(0, 110, 44, 0.15);
 }
 
-/* Botón Fantasma / Esqueleto: Borde azul */
+/* Botón Fantasma / Esqueleto: Borde verde */
 .btn-ghost {
     background-color: transparent;
-    border-color: var(--color-primary);
-    color: var(--color-primary);
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
 }
 
 .btn-ghost:hover {
-    background-color: rgba(0, 37, 70, 0.05);
+    background-color: rgba(0, 110, 44, 0.05);
     transform: translateY(-2px);
 }
 
@@ -270,7 +270,7 @@ h1, h2, h3, h4, h5, h6 {
     position: sticky;
     top: 0;
     z-index: 1000;
-    height: 80px;
+    height: 115px;
     display: flex;
     align-items: center;
     transition: box-shadow 0.3s ease;
@@ -293,7 +293,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-logo-img {
-    height: 80px; /* Aumentado al 100% de la altura de la cabecera (80px) */
+    height: 90px; /* Tamaño del logo dentro de la cabecera (115px) para evitar desbordes */
     width: auto;
     display: block;
 }
@@ -366,7 +366,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-title {
-    color: var(--color-primary);
+    color: #111111;
 }
 
 .hero-description {
@@ -489,7 +489,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .why-card h3 {
     font-size: 18px;
-    color: var(--color-primary);
+    color: #111111;
 }
 
 /* ==========================================================================
@@ -751,7 +751,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .formula-card h3 {
     font-size: 18px;
-    color: var(--color-primary);
+    color: #111111;
 }
 
 /* ==========================================================================
@@ -783,7 +783,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .comparison-table th {
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary); /* Verde de marca */
     color: #ffffff;
     font-family: var(--font-display);
     font-weight: 700;
@@ -791,7 +791,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .comparison-table th:first-child {
-    background-color: #00162a; /* Contraste para la columna de características */
+    background-color: #004d1f; /* Contraste para la columna de características en verde oscuro */
 }
 
 .comparison-table td:first-child {
@@ -910,7 +910,7 @@ h1, h2, h3, h4, h5, h6 {
    14. LLAMADO A LA ACCIÓN (CTA)
    ========================================================================== */
 .cta-section {
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     color: #ffffff;
     text-align: center;
     position: relative;
@@ -924,8 +924,19 @@ h1, h2, h3, h4, h5, h6 {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(13, 59, 102, 0.4) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0, 110, 44, 0.4) 0%, transparent 70%);
     pointer-events: none;
+}
+
+.cta-section .btn {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+}
+
+.cta-section .btn:hover {
+    background-color: #003766;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 37, 70, 0.2);
 }
 
 .cta-container {
@@ -959,7 +970,7 @@ h1, h2, h3, h4, h5, h6 {
 .site-footer {
     background-color: var(--color-surface-container);
     padding: 60px 0 30px;
-    color: var(--color-on-surface-variant);
+    color: #111111; /* Cambiado a negro para mayor contraste */
     font-size: 14px;
     border-top: 1px solid var(--color-outline-variant);
 }
@@ -981,7 +992,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     font-size: 20px;
     font-weight: 700;
-    color: var(--color-primary);
+    color: #111111; /* Cambiado a negro */
 }
 
 .footer-social-icons {
@@ -1011,7 +1022,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-contact-col h4 {
     font-size: 15px;
     margin-bottom: 20px;
-    color: var(--color-primary);
+    color: #111111; /* Cambiado a negro */
 }
 
 .footer-links-col ul {
@@ -1031,7 +1042,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 12px;
     line-height: 1.6;
     text-align: center;
-    color: var(--color-outline);
+    color: #111111; /* Cambiado a negro */
 }
 
 /* ==========================================================================
@@ -1194,18 +1205,18 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .header-logo-img {
-        height: 52px; /* Altura más legible para pantallas móviles */
-        max-width: 160px; /* Evita que el ancho de la imagen empuje el botón del menú hamburguesa */
+        height: 70px; /* Altura del logo dentro de la cabecera móvil para evitar desbordes */
+        max-width: 240px; /* Evita que el ancho de la imagen empuje el botón del menú hamburguesa */
         width: auto;
         display: block;
     }
 
     .main-navigation {
         position: fixed;
-        top: 80px;
+        top: 115px;
         left: 0;
         width: 100%;
-        height: calc(100vh - 80px);
+        height: calc(100vh - 115px);
         background-color: var(--color-surface-container-lowest);
         flex-direction: column;
         padding: 40px var(--spacing-margin-mobile);

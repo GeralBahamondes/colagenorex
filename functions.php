@@ -14,10 +14,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Registrar y encolar estilos y scripts del tema.
  */
 function colagenorex_enqueue_assets() {
-    // 1. Encolar Fuentes de Google: Montserrat para encabezados y Inter para texto del cuerpo.
+    // 1. Encolar Fuentes de Google: Poppins para encabezados y Inter para texto del cuerpo.
     wp_enqueue_style(
         'colagenorex-google-fonts',
-        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap',
+        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap',
         array(),
         null
     );

@@ -50,6 +50,12 @@ if ( ! defined( 'ABSPATH' ) ) {
             <!-- Columna 3: Información de Contacto / Registro -->
             <div class="footer-contact-col">
                 <h4>Contacto</h4>
+                <p class="body-md" style="font-size: 14px; margin-bottom: 8px;">
+                    Tel / WhatsApp: <a href="https://wa.me/56985632681" style="color: #111111; text-decoration: underline;">+56 9 8563 2681</a>
+                </p>
+                <p class="body-md" style="font-size: 14px; margin-bottom: 8px;">
+                    Email: <a href="mailto:farmaciaslasanimas@gmail.com" style="color: #111111; text-decoration: underline;">farmaciaslasanimas@gmail.com</a>
+                </p>
                 <p class="body-md" style="font-size: 14px; margin-bottom: 8px;">Res. Seremi N96854 del 21/10/13</p>
                 <p class="body-md" style="font-size: 14px;">Para consultas directas o soporte, contáctenos vía correo o a través de nuestros canales autorizados.</p>
             </div>

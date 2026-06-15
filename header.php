@@ -15,7 +15,7 @@
         
         <!-- Logotipo de la Marca -->
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo">
-            <img src="<?php echo esc_url( get_template_directory_uri() . '/images/logo.png' ); ?>" alt="Colagenorex Logo" class="header-logo-img">
+            <img src="<?php echo esc_url( get_template_directory_uri() . '/images/logo1.jpeg' ); ?>" alt="Colagenorex Logo" class="header-logo-img">
         </a>
 
         <!-- Botón del Menú Hamburguesa (Solo Visible en Móvil) -->
