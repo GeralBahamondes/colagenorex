@@ -88,6 +88,11 @@ Text Domain: colagenorex
     padding: 0;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     font-family: var(--font-body);
     font-size: 16px;
@@ -96,7 +101,6 @@ body {
     color: var(--color-on-background);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
 }
 
 img {
@@ -404,6 +408,8 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
     position: relative;
+    min-width: 0;
+    width: 100%;
 }
 
 .hero-image-placeholder {
@@ -513,6 +519,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid var(--color-outline-variant);
     background-size: cover;
     background-position: center;
+    cursor: pointer;
 }
 
 /* Fondos degradados elegantes simulando las imágenes requeridas */
@@ -542,6 +549,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tarjeta de texto limpia */
 .benefit-card-clean {
+    position: relative;
     background-color: var(--color-surface-container-lowest);
     border: 1px solid var(--color-outline-variant);
     border-radius: var(--border-radius-default);
@@ -550,12 +558,107 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     gap: 16px;
     justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .benefit-card-clean .benefit-icon {
     width: 40px;
     height: 40px;
     color: var(--color-primary);
+}
+
+/* --- INTERACTIVIDAD: DETALLE DE BENEFICIOS --- */
+
+.benefit-card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    width: 100%;
+    transition: opacity 0.2s ease;
+}
+
+.benefit-card-clean .benefit-card-content {
+    justify-content: center;
+    gap: 16px;
+}
+
+.btn-read-more {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-secondary-container);
+    margin-top: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+}
+
+.benefit-card-clean .btn-read-more {
+    color: var(--color-secondary);
+    margin-top: 0;
+}
+
+.benefit-detail-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 37, 70, 0.97); /* Azul profundo translúcido */
+    color: #ffffff;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+    transform: translateY(100%);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 10;
+}
+
+.benefit-card-clean .benefit-detail-overlay {
+    background-color: rgba(0, 110, 44, 0.97); /* Verde salud translúcido */
+}
+
+/* Cuando la tarjeta se expande */
+.benefit-card-image.expanded .benefit-detail-overlay,
+.benefit-card-clean.expanded .benefit-detail-overlay {
+    transform: translateY(0);
+}
+
+.benefit-detail-overlay h3 {
+    color: #ffffff;
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.benefit-detail-overlay .detail-text {
+    font-family: var(--font-body);
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0;
+}
+
+.btn-close-overlay {
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: color 0.2s ease;
+    align-self: flex-end;
+}
+
+.btn-close-overlay:hover {
+    color: #ffffff;
 }
 
 /* Ajustes del layout del grid */
@@ -697,10 +800,14 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-.comparison-table td:nth-child(3), 
-.comparison-table th:nth-child(3) {
+.comparison-table td:nth-child(3) {
     text-align: center;
     color: var(--color-on-surface-variant);
+}
+
+.comparison-table th:nth-child(3) {
+    text-align: center;
+    color: #ffffff; /* Cambiado a blanco para evitar que se vea oscuro */
 }
 
 .comparison-table td svg.check-icon {
@@ -1067,8 +1174,15 @@ h1, h2, h3, h4, h5, h6 {
         padding: calc(var(--spacing-base) * 6) 0;
     }
 
-    /* Mostrar menú hamburguesa */
+    /* Mostrar menú hamburguesa y ajustar logo */
     .menu-toggle {
+        display: block;
+    }
+
+    .header-logo-img {
+        height: 52px; /* Altura más legible para pantallas móviles */
+        max-width: 160px; /* Evita que el ancho de la imagen empuje el botón del menú hamburguesa */
+        width: auto;
         display: block;
     }
 
@@ -1083,13 +1197,17 @@ h1, h2, h3, h4, h5, h6 {
         padding: 40px var(--spacing-margin-mobile);
         gap: 32px;
         transform: translateX(100%);
-        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        opacity: 0;
+        visibility: hidden; /* Evita desbordamiento horizontal en navegadores móviles (Safari/Chrome de celular) */
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, visibility 0.3s ease;
         border-top: 1px solid var(--color-outline-variant);
         box-shadow: 0 10px 15px rgba(0,0,0,0.05);
     }
 
     .main-navigation.active {
         transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
     }
 
     .nav-menu {
@@ -1454,15 +1572,17 @@ h1, h2, h3, h4, h5, h6 {
 /* --- VISTA ESTÁTICA TEMPORAL PARA v0 --- */
 .product-static-preview {
     width: 100%;
-    max-width: 480px; /* Incrementado para que la caja se vea más grande */
+    max-width: 480px; /* Incrementado para que la caja se vea más grande en desktop */
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 0;
 }
 
 .hero-static-image {
     width: 100%;
+    max-width: 100%; /* Asegura que la imagen no desborde en pantallas pequeñas */
     height: auto;
     display: block;
     filter: drop-shadow(0 15px 35px rgba(0, 37, 70, 0.15));

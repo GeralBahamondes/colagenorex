@@ -167,4 +167,36 @@ document.addEventListener('DOMContentLoaded', function() {
             window.open(whatsappUrl, '_blank');
         });
     }
+
+    // ==========================================
+    // 6. INTERACTIVIDAD EN TARJETAS DE BENEFICIOS
+    // ==========================================
+    const benefitCards = document.querySelectorAll('.benefit-card-image, .benefit-card-clean');
+
+    benefitCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            const closeBtn = e.target.closest('.btn-close-overlay');
+            
+            if (closeBtn) {
+                e.stopPropagation();
+                card.classList.remove('expanded');
+                card.setAttribute('aria-expanded', 'false');
+                return;
+            }
+
+            if (e.target.closest('a')) return;
+
+            const isExpanded = card.classList.contains('expanded');
+            
+            benefitCards.forEach(otherCard => {
+                otherCard.classList.remove('expanded');
+                otherCard.setAttribute('aria-expanded', 'false');
+            });
+
+            if (!isExpanded) {
+                card.classList.add('expanded');
+                card.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
 });

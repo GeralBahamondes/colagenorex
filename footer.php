@@ -40,10 +40,10 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="footer-links-col">
                 <h4>Enlaces Rápidos</h4>
                 <ul>
-                    <li><a href="#">Aviso Legal</a></li>
-                    <li><a href="#">Privacidad</a></li>
-                    <li><a href="#">Términos y Condiciones</a></li>
-                    <li><a href="https://wa.me/569XXXXXXXX" target="_blank" rel="noopener noreferrer">Contacto WhatsApp</a></li>
+                    <li><a href="#beneficios">Beneficios</a></li>
+                    <li><a href="#formula">Fórmula</a></li>
+                    <li><a href="#comparativa">Comparativa</a></li>
+                    <li><a href="#" class="btn-cta-trigger">Obtener más información</a></li>
                 </ul>
             </div>
 

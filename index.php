@@ -198,30 +198,62 @@ get_header();
                 
                 <!-- Tarjeta 1: Movilidad y Flexibilidad (Imagen de Fondo) -->
                 <div class="benefit-card-image bg-mobility card-1">
-                    <h3>Movilidad y Flexibilidad</h3>
-                    <p>Mejora el rango de movimiento y lubrica tus articulaciones para una vida sin límites.</p>
+                    <div class="benefit-card-content">
+                        <h3>Movilidad y Flexibilidad</h3>
+                        <p>Mejora el rango de movimiento y lubrica tus articulaciones para una vida sin límites.</p>
+                        <span class="btn-read-more">Ver detalle +</span>
+                    </div>
+                    <div class="benefit-detail-overlay">
+                        <h3>Movilidad y Flexibilidad</h3>
+                        <p class="detail-text">Ayuda a mejorar la elasticidad y movilidad de las articulaciones, reduciendo la rigidez. El Colágeno Tipo II es el componente principal de los cartílagos articulares, esencial para proporcionar resistencia y permitir un movimiento suave entre las superficies óseas.</p>
+                        <span class="btn-close-overlay">Cerrar &times;</span>
+                    </div>
                 </div>
 
                 <!-- Tarjeta 2: Recuperación Post Ejercicio (Imagen de Fondo) -->
                 <div class="benefit-card-image bg-recovery card-2">
-                    <h3>Recuperación Post Ejercicio</h3>
-                    <p>Acelera la reparación de tejidos después de sesiones intensas de entrenamiento.</p>
+                    <div class="benefit-card-content">
+                        <h3>Recuperación Post Ejercicio</h3>
+                        <p>Acelera la reparación de tejidos después de sesiones intensas de entrenamiento.</p>
+                        <span class="btn-read-more">Ver detalle +</span>
+                    </div>
+                    <div class="benefit-detail-overlay">
+                        <h3>Recuperación Post Ejercicio</h3>
+                        <p class="detail-text">Facilita la recuperación del organismo tras la actividad física. La incorporación de Magnesio ayuda al funcionamiento normal de nervios y músculos, mientras que el Potasio favorece el desarrollo del tejido muscular y previene la aparición de calambres.</p>
+                        <span class="btn-close-overlay">Cerrar &times;</span>
+                    </div>
                 </div>
 
                 <!-- Tarjeta 3: Protección Antioxidante (Blanca, Texto) -->
                 <div class="benefit-card-clean card-3">
-                    <div class="benefit-icon">
-                        <!-- Icono de Reloj/Protección -->
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <div class="benefit-card-content">
+                        <div class="benefit-icon">
+                            <!-- Icono de Reloj/Protección -->
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <h3 class="headline-md" style="color: var(--color-primary); margin-bottom: 8px;">Protección Antioxidante</h3>
+                        <p class="body-md">Combate los radicales libres gracias a la Vitamina C y Coenzima Q10.</p>
+                        <span class="btn-read-more">Ver detalle +</span>
                     </div>
-                    <h3 class="headline-md" style="color: var(--color-primary);">Protección Antioxidante</h3>
-                    <p class="body-md">Combate los radicales libres gracias a la Vitamina C y Coenzima Q10.</p>
+                    <div class="benefit-detail-overlay">
+                        <h3>Protección Antioxidante</h3>
+                        <p class="detail-text">Sus componentes protegen a las células contra los radicales libres. La inclusión de Vitamina C es fundamental para la síntesis natural de colágeno, mientras que la Coenzima Q10 (CoQ10) combate el daño oxidativo y es vital para la producción de energía celular.</p>
+                        <span class="btn-close-overlay">Cerrar &times;</span>
+                    </div>
                 </div>
 
                 <!-- Tarjeta 4: Salud de la Piel (Imagen de Fondo) -->
                 <div class="benefit-card-image bg-skin card-4">
-                    <h3>Salud de la Piel</h3>
-                    <p>Promueve la producción endógena de colágeno para una piel más tersa, hidratada y firme.</p>
+                    <div class="benefit-card-content">
+                        <h3>Salud de la Piel</h3>
+                        <p>Promueve la producción endógena de colágeno para una piel más tersa, hidratada y firme.</p>
+                        <span class="btn-read-more">Ver detalle +</span>
+                    </div>
+                    <div class="benefit-detail-overlay">
+                        <h3>Salud de la Piel</h3>
+                        <p class="detail-text">Contribuye a atenuar el envejecimiento cutáneo y mejora la firmeza de la piel. El Colágeno Tipo I es la proteína más abundante en el cuerpo, fundamental para la estructura, firmeza y elasticidad de la dermis y los tejidos conectivos.</p>
+                        <span class="btn-close-overlay">Cerrar &times;</span>
+                    </div>
                 </div>
 
             </div>
