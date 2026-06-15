@@ -157,12 +157,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // Codificar el texto para la URL
             const encodedMessage = encodeURIComponent(message);
             
-            // Construir enlace de WhatsApp API
-            const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
-
+            // Construir enlace universal directo a WhatsApp (sin usar APIs ni cuentas de desarrollo)
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+ 
             // Cerrar el modal antes de redirigir
             closeModal();
-
+ 
             // Abrir WhatsApp en una nueva pestaña
             window.open(whatsappUrl, '_blank');
         });

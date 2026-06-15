@@ -522,19 +522,33 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 
-/* Fondos degradados elegantes simulando las imágenes requeridas */
+/* Fondos degradados elegantes con imágenes y overlays */
 .bg-mobility {
-    background: linear-gradient(to top, rgba(0, 37, 70, 0.95) 0%, rgba(0, 37, 70, 0.4) 100%), 
-                radial-gradient(circle at top right, rgba(0, 110, 44, 0.3), transparent);
+    background: linear-gradient(to top, rgba(0, 37, 70, 0.8) 0%, rgba(0, 37, 70, 0.3) 100%), 
+                url('images/rodilla.jfif');
+    background-size: cover;
+    background-position: center;
 }
 
 .bg-recovery {
-    background: linear-gradient(to top, rgba(0, 110, 44, 0.95) 0%, rgba(0, 110, 44, 0.4) 100%);
+    background: linear-gradient(to top, rgba(0, 30, 12, 0.7) 0%, rgba(0, 30, 12, 0.25) 100%), 
+                url('images/corredores.jfif');
+    background-size: cover;
+    background-position: center;
 }
 
 .bg-skin {
-    background: linear-gradient(to top, rgba(13, 59, 102, 0.95) 0%, rgba(13, 59, 102, 0.4) 100%),
-                repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 2px, transparent 2px, transparent 10px);
+    background: linear-gradient(to top, rgba(13, 35, 60, 0.65) 0%, rgba(13, 59, 102, 0.2) 100%),
+                url('images/piel.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-antioxidant {
+    background: linear-gradient(to top, rgba(0, 37, 70, 0.8) 0%, rgba(0, 37, 70, 0.3) 100%), 
+                url('images/capsulas.jpeg');
+    background-size: cover;
+    background-position: center 55%;
 }
 
 .benefit-card-image h3 {

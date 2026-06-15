@@ -224,15 +224,11 @@ get_header();
                     </div>
                 </div>
 
-                <!-- Tarjeta 3: Protección Antioxidante (Blanca, Texto) -->
-                <div class="benefit-card-clean card-3">
+                <!-- Tarjeta 3: Protección Antioxidante (Imagen de Fondo) -->
+                <div class="benefit-card-image bg-antioxidant card-3">
                     <div class="benefit-card-content">
-                        <div class="benefit-icon">
-                            <!-- Icono de Reloj/Protección -->
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                        </div>
-                        <h3 class="headline-md" style="color: var(--color-primary); margin-bottom: 8px;">Protección Antioxidante</h3>
-                        <p class="body-md">Combate los radicales libres gracias a la Vitamina C y Coenzima Q10.</p>
+                        <h3>Protección Antioxidante</h3>
+                        <p>Combate los radicales libres gracias a la Vitamina C y Coenzima Q10.</p>
                         <span class="btn-read-more">Ver detalle +</span>
                     </div>
                     <div class="benefit-detail-overlay">
