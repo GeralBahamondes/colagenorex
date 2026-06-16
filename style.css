@@ -1733,5 +1733,74 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* ==========================================================================
+   20. CARRUSEL AUTOMÁTICO DE HERO (SLIDESHOW DE FONDO)
+   ========================================================================== */
+.hero-section.hero-carousel {
+    position: relative;
+    overflow: hidden;
+    background: none; /* Quitamos el fondo estático */
+}
+
+/* Degradado para garantizar legibilidad del texto en el lado izquierdo */
+.hero-overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%; /* Ampliamos para cubrir el 75% del ancho garantizando legibilidad total del texto */
+    height: 100%;
+    background: linear-gradient(to right, rgba(247, 249, 252, 1) 0%, rgba(247, 249, 252, 0.98) 55%, rgba(247, 249, 252, 0.85) 75%, rgba(247, 249, 252, 0) 100%);
+    z-index: 2;
+    pointer-events: none; /* Permite clics a través del degradado */
+}
+
+.carousel-slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+/* El contenido del Hero debe flotar sobre los slides y el degradado */
+.hero-carousel .container {
+    position: relative;
+    z-index: 3; /* Z-index mayor que el degradado (2) y slides (1) */
+}
+
+@media (min-width: 1025px) {
+    /* En computadores, ocultamos el render HTML de la caja porque viene integrado en los slides diseñados */
+    .hero-carousel .hero-image-container {
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+/* Ajustes responsivos para móvil y tablet */
+@media (max-width: 1024px) {
+    /* En móvil, el degradado es vertical (de arriba a abajo) y cubre el 100% del ancho */
+    .hero-overlay-gradient {
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(247, 249, 252, 1) 0%, rgba(247, 249, 252, 0.98) 60%, rgba(247, 249, 252, 0.85) 80%, rgba(247, 249, 252, 0) 100%);
+    }
+}
+
 
 

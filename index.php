@@ -14,7 +14,15 @@ get_header();
     <!-- ==========================================
          1. SECCIÓN HERO
          ========================================== -->
-    <section class="hero-section">
+    <section class="hero-section hero-carousel">
+        <!-- Slides de Fondo -->
+        <div class="carousel-slides">
+            <div class="carousel-slide active" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/images/slide1.jfif' ); ?>');"></div>
+            <div class="carousel-slide" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/images/slide2.jpeg' ); ?>');"></div>
+            <div class="carousel-slide" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/images/slide3.jpeg' ); ?>');"></div>
+        </div>
+        <!-- Capa de Degradado para Legibilidad -->
+        <div class="hero-overlay-gradient"></div>
         <div class="container hero-grid">
             
             <!-- Contenido del Hero (Lado Izquierdo) -->
