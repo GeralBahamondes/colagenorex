@@ -386,9 +386,9 @@ get_header();
     </section>
 
     <!-- ==========================================
-         6. SECCIÓN: INFORMACIÓN NUTRICIONAL Y MODO DE USO
+         6. SECCIÓN: INFORMACIÓN NUTRICIONAL
          ========================================== -->
-    <section class="usage-section section-padding">
+    <section id="nutricion" class="usage-section section-padding">
         <div class="container">
             <h2 class="headline-lg">Información Nutricional</h2>
             

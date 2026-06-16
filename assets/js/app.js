@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (targetElement) {
                 e.preventDefault();
                 
-                // Calcular compensación por la cabecera fija (115px)
-                const headerHeight = 115;
+                // Calcular compensación dinámica por la cabecera fija
+                const headerHeight = header ? header.offsetHeight : 80;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
 

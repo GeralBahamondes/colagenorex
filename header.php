@@ -25,18 +25,14 @@
             <span></span>
         </button>
 
-        <!-- Navegación Principal y Botón de Conversión -->
+        <!-- Navegación Principal -->
         <nav id="main-navigation" class="main-navigation">
             <ul class="nav-menu">
                 <li><a href="#beneficios">Beneficios</a></li>
                 <li><a href="#formula">Fórmula</a></li>
                 <li><a href="#comparativa">Comparativa</a></li>
+                <li><a href="#nutricion">Información Nutricional</a></li>
             </ul>
-            
-            <!-- Botón de Llamado a la Acción en Cabecera -->
-            <a href="#" class="btn btn-primary btn-cta-trigger" style="padding: 10px 20px; font-size: 14px;">
-                Obtener más información
-            </a>
         </nav>
 
     </div>

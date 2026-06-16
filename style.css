@@ -37,7 +37,7 @@ Text Domain: colagenorex
     --color-on-primary-container: #81a6d7;
     --color-inverse-primary: #a4c9fc;
     
-    --color-secondary: #006e2c; /* Verde Salud / Acción */
+    --color-secondary: #008f39; /* Verde Salud / Acción (Alineado con el verde brillante del logo y los iconos) */
     --color-on-secondary: #ffffff;
     --color-secondary-container: #8bfa9c;
     --color-on-secondary-container: #007430;
@@ -212,12 +212,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Botón Primario: Verde de marca */
 .btn-primary {
-    background-color: var(--color-secondary);
-    color: var(--color-on-primary);
+    background-color: #008f39 !important;
+    color: var(--color-on-primary) !important;
 }
 
 .btn-primary:hover {
-    background-color: #008f39;
+    background-color: #006e2c;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 110, 44, 0.15);
 }
@@ -229,7 +229,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-secondary:hover {
-    background-color: #008f39;
+    background-color: #006e2c;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 110, 44, 0.15);
 }
@@ -264,13 +264,12 @@ h1, h2, h3, h4, h5, h6 {
    6. CABECERA Y NAVEGACIÓN (Sticky Header)
    ========================================================================== */
 .site-header {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background-color: #ffffff;
     border-bottom: 1px solid var(--color-outline-variant);
     position: sticky;
     top: 0;
     z-index: 1000;
-    height: 115px;
+    height: 95px;
     display: flex;
     align-items: center;
     transition: box-shadow 0.3s ease;
@@ -302,6 +301,18 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     gap: 32px;
+}
+
+/* Forzar que el botón de llamado a la acción del header sea verde */
+.site-header .btn-cta-trigger {
+    background-color: #008f39 !important;
+    color: var(--color-on-primary) !important;
+}
+
+.site-header .btn-cta-trigger:hover {
+    background-color: #006e2c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 110, 44, 0.15);
 }
 
 .nav-menu {
@@ -1213,10 +1224,10 @@ h1, h2, h3, h4, h5, h6 {
 
     .main-navigation {
         position: fixed;
-        top: 115px;
+        top: 95px;
         left: 0;
         width: 100%;
-        height: calc(100vh - 115px);
+        height: calc(100vh - 95px);
         background-color: var(--color-surface-container-lowest);
         flex-direction: column;
         padding: 40px var(--spacing-margin-mobile);

@@ -27,7 +27,7 @@ function colagenorex_enqueue_assets() {
         'colagenorex-main-style',
         get_stylesheet_uri(),
         array('colagenorex-google-fonts'),
-        '1.0.0'
+        filemtime( get_template_directory() . '/style.css' )
     );
 
     // 3. Encolar el script interactivo principal del tema (app.js).
@@ -35,7 +35,7 @@ function colagenorex_enqueue_assets() {
         'colagenorex-app-script',
         get_template_directory_uri() . '/assets/js/app.js',
         array(), // Sin dependencias externas como jQuery para mayor velocidad de carga.
-        '1.0.0',
+        filemtime( get_template_directory() . '/assets/js/app.js' ),
         true     // Cargar en el footer para no bloquear el renderizado del HTML.
     );
 }
