@@ -1629,5 +1629,109 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-8px);
 }
 
+/* ==========================================================================
+   19. TABLA DE INFORMACIÓN NUTRICIONAL
+   ========================================================================== */
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 48px;
+    align-items: center;
+    width: 100%;
+}
+
+.nutrition-table-column {
+    width: 100%;
+}
+
+.nutrition-image-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.nutrition-box-image {
+    max-width: 80%;
+    height: auto;
+    margin-top: -40px; /* Sube la imagen de la caja un poco */
+    filter: drop-shadow(0 15px 35px rgba(0, 37, 70, 0.12));
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nutrition-jar-image {
+    max-width: 45%;
+    height: auto;
+    filter: drop-shadow(0 15px 35px rgba(0, 37, 70, 0.12));
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nutrition-box-image:hover,
+.nutrition-jar-image:hover {
+    transform: translateY(-8px);
+}
+
+.nutrition-general-info,
+.nutrition-ingredients {
+    background-color: var(--color-surface-container-low);
+    padding: 20px;
+    border-radius: var(--border-radius-default);
+    border: 1px solid var(--color-outline-variant);
+    margin-bottom: 24px;
+}
+
+.nutrition-general-info p,
+.nutrition-ingredients p {
+    color: var(--color-on-surface);
+}
+
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: var(--color-surface-container-lowest);
+    margin-bottom: 12px;
+}
+
+.nutrition-table th, 
+.nutrition-table td {
+    padding: 12px 18px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    border-bottom: 1px solid var(--color-outline-variant);
+}
+
+.nutrition-table th {
+    background-color: var(--color-secondary); /* Verde de marca igual al de la comparativa */
+    color: #ffffff;
+    font-family: var(--font-display);
+    font-weight: 700;
+}
+
+.nutrition-table tr:nth-child(even) {
+    background-color: var(--color-surface-container-low);
+}
+
+.nutrition-table-note {
+    font-size: 13px;
+    color: var(--color-on-surface-variant);
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+/* Responsividad para la sección de Información Nutricional */
+@media (max-width: 1024px) {
+    .nutrition-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .nutrition-box-image {
+        margin-top: 0; /* Evita superposiciones con la tabla en móviles y tablets */
+    }
+}
+
 
 

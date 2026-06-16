@@ -385,8 +385,137 @@
         <div class="container">
             <h2 class="headline-lg">Información Nutricional</h2>
             
-            <div class="nutritional-info-container" style="display: flex; justify-content: center; align-items: center;">
-                <img src="./images/infonutri.jfif" alt="Información Nutricional" style="max-width: 100%; height: auto;">
+            <div class="nutrition-grid">
+                <!-- Columna Izquierda: Tabla Nutricional -->
+                <div class="nutrition-table-column">
+                    <!-- Información General -->
+                    <div class="nutrition-general-info">
+                        <p style="margin-bottom: 8px; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); font-size: 16px;">Información General</p>
+                        <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+                            <p><strong>Tamaño de la porción:</strong> 3 cápsulas (1,5 g)</p>
+                            <p><strong>Porciones por envase:</strong> 30</p>
+                        </div>
+                    </div>
+
+                    <!-- Tabla de Composición -->
+                    <div class="table-responsive">
+                        <table class="nutrition-table">
+                            <thead>
+                                <tr>
+                                    <th>Componente</th>
+                                    <th style="text-align: center;">Por 100 g</th>
+                                    <th style="text-align: center;">Por 1 porción</th>
+                                    <th style="text-align: center;">% DDR*</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Energía (kcal)</strong></td>
+                                    <td style="text-align: center;">293,0</td>
+                                    <td style="text-align: center;">4,4</td>
+                                    <td style="text-align: center;">-</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Proteínas (g)</strong></td>
+                                    <td style="text-align: center;">73,0</td>
+                                    <td style="text-align: center;">1,1</td>
+                                    <td style="text-align: center;">-</td>
+                                </tr>
+                                <tr>
+                                    <td>Grasa total (grs)</td>
+                                    <td style="text-align: center;">0,0</td>
+                                    <td style="text-align: center;">0,0</td>
+                                    <td style="text-align: center;">-</td>
+                                </tr>
+                                <tr>
+                                    <td>Hidratos de carbono disponibles (grs)</td>
+                                    <td style="text-align: center;">0,0</td>
+                                    <td style="text-align: center;">0,0</td>
+                                    <td style="text-align: center;">-</td>
+                                </tr>
+                                <tr style="font-size: 14px; opacity: 0.85;">
+                                    <td style="padding-left: 32px;">Azúcares totales (grs)</td>
+                                    <td style="text-align: center;">0,0</td>
+                                    <td style="text-align: center;">0,0</td>
+                                    <td style="text-align: center;">-</td>
+                                </tr>
+                                <tr>
+                                    <td>Fibra dietética total (grs)</td>
+                                    <td style="text-align: center;">0,0</td>
+                                    <td style="text-align: center;">0,0</td>
+                                    <td style="text-align: center;">-</td>
+                                </tr>
+                                <tr>
+                                    <td>Sodio (mg)</td>
+                                    <td style="text-align: center;">0,0</td>
+                                    <td style="text-align: center;">0,5</td>
+                                    <td style="text-align: center;">-</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Colágeno hidrolizado (mg)</strong></td>
+                                    <td style="text-align: center;">220.000</td>
+                                    <td style="text-align: center;">1.100</td>
+                                    <td style="text-align: center;">-</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Vitamina C (mg)</strong></td>
+                                    <td style="text-align: center;">12.000</td>
+                                    <td style="text-align: center;">180</td>
+                                    <td style="text-align: center;">300</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Magnesio (mg)</strong></td>
+                                    <td style="text-align: center;">8.000</td>
+                                    <td style="text-align: center;">120</td>
+                                    <td style="text-align: center;">40</td>
+                                </tr>
+                                <tr>
+                                    <td>Potasio (mg)</td>
+                                    <td style="text-align: center;">2.000</td>
+                                    <td style="text-align: center;">30</td>
+                                    <td style="text-align: center;">-</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Zinc (mg)</strong></td>
+                                    <td style="text-align: center;">1.320</td>
+                                    <td style="text-align: center;">19,8</td>
+                                    <td style="text-align: center;">132</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Coenzima Q10 (mg)</strong></td>
+                                    <td style="text-align: center;">1.000</td>
+                                    <td style="text-align: center;">15</td>
+                                    <td style="text-align: center;">-</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Vitamina D (mcg)</strong></td>
+                                    <td style="text-align: center;">1.320</td>
+                                    <td style="text-align: center;">19,8</td>
+                                    <td style="text-align: center;">396</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- DDR Nota -->
+                    <p class="nutrition-table-note">
+                        * % en relación a la Dosis Diaria de Referencia según Codex/FDA.
+                    </p>
+
+                    <!-- Ingredientes -->
+                    <div class="nutrition-ingredients">
+                        <p style="margin-bottom: 8px; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); font-size: 16px;">Ingredientes</p>
+                        <p style="line-height: 1.6; opacity: 0.9;">
+                            Colágeno hidrolizado, ácido ascórbico, cloruro de magnesio, citrato de potasio, ubiquinona, gluconato de zinc, colecalciferol, gelatina (cápsula).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Imágenes del Producto (Caja y Frasco) -->
+                <div class="nutrition-image-column">
+                    <img src="./images/sinfondo.png" alt="Colagenorex Empaque" class="nutrition-box-image">
+                    <img src="./images/frasco.png" alt="Colagenorex Frasco" class="nutrition-jar-image">
+                </div>
             </div>
         </div>
     </section>
