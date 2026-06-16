@@ -9,7 +9,6 @@ La página ha sido desarrollada siguiendo el sistema de diseño **"Vitality Scie
 ## 🚀 Características Clave
 
 * **Diseño Dual Híbrido**: Funciona tanto como una plantilla HTML estática (para hosting rápido en plataformas como Vercel o Netlify) como un **Tema de WordPress a la medida** completamente integrado.
-* **Modelo 3D Interactivo**: Visualización rotativa en 3D puro del empaque del producto utilizando únicamente CSS 3D avanzado (sin necesidad de pesadas librerías de terceros como Three.js o WebGL), optimizada para pantallas táctiles y ratón.
 * **Sistema de Diseño Clínico**: Paleta de colores armoniosa con azul farmacéutico profundo (`#002546`), verde de conversión de marca (`#008f39`), tipografía legible (`Poppins` e `Inter`) y sombras sutiles.
 * **Menú Móvil Hamburguesa Responsivo**: Drawer colapsable optimizado para visualización en teléfonos con transiciones fluidas.
 * **Compensación de Scroll Dinámica**: Script nativo en Vanilla JS que mide dinámicamente la altura del cabezal fijo (`95px` en desktop, `75px` en móvil) para alinear con precisión las secciones al hacer clic en los enlaces de navegación.
