@@ -1802,5 +1802,26 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Ajustes específicos para celular (Menor a 768px) */
+@media (max-width: 768px) {
+    /* Desactivar el carrusel de fondo y degradado en celulares para mejorar rendimiento y legibilidad */
+    .hero-section.hero-carousel {
+        background: var(--color-surface) !important; /* Forzar el fondo sólido del tema (#f7f9fc) */
+    }
+    
+    .hero-section.hero-carousel .carousel-slides {
+        display: none !important; /* Ocultar diapositivas de fondo */
+    }
+    
+    .hero-section.hero-carousel .hero-overlay-gradient {
+        display: none !important; /* Ocultar el degradado ya que no hay imagen de fondo */
+    }
+    
+    /* Ocultar la caja del producto (sinfondo.png) de la parte de arriba en celular */
+    .hero-carousel .hero-image-container {
+        display: none !important;
+    }
+}
+
 
 
